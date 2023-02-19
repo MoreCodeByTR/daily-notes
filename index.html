@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代理模式</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var myImage = (function(){
+        var imgNode = new Image();
+        document.body.appendChild(imgNode);
+
+        return {
+            setStr:function(url){
+                imgNode.src = url
+            }
+        }
+    })();
+
+    var proxyImage = (function(){
+        var proxyImg = new Image();
+        proxyImg.onload = function(){
+            myImage.setStr(this.src)
+            console.log(this.src);
+        }
+
+        return {
+            setStr:function(url){
+                myImage.setStr('https://avatars.githubusercontent.com/u/11247099?s=64&v=4');
+                proxyImg.src = url
+            }
+        }
+    })();
+
+    proxyImage.setStr('https://avatars.githubusercontent.com/u/8827896')
+</script>
+</html>
