@@ -1,7 +1,5 @@
 # React
 
-# React
-
 1、什么是纯函数（pure function）？
 
 能够满足下面两个特性[click here](https://en.wikipedia.org/wiki/Pure_function)
