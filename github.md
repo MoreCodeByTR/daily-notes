@@ -9,3 +9,11 @@
 - 提交到远程分支, 先添加远程仓库地址，再进行常规的的 `add`、 `commit` 操作即可
 
 `git remote add origin https://github.com/MoreCodeByTR/ice-admin.git`
+
+---
+
+## 在线查看源码
+
+将链接 github 改为 github1s ,如下
+
+https://github1s.com/Mereithhh/vanblog/blob/HEAD/.versionrc.js
